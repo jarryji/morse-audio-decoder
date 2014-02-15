@@ -9,8 +9,12 @@ import javax.swing.*;
 
 public class Gui extends JFrame
 {
-    // instance variables - replace the example below with your own
-    private JPanel panel;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1022040207410645701L;
+
+	private JPanel panel;
     private JButton jbutton;
     private JLabel jlabel;
 

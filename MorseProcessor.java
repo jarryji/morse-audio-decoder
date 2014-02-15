@@ -30,8 +30,6 @@ public class MorseProcessor
                 signal_medium_value,
                 silence_medium_value;
     
-    private boolean debug;
-                
     private double [] buffer;
     
     public MorseProcessor(String filename) throws WavFileException, IOException
@@ -41,7 +39,6 @@ public class MorseProcessor
         this.sampleRate     = ((int) 44100 / 1000) * 10; // 44 frames per ms * 10 = 10ms sample length
         this.buffer         = new double[this.sampleRate * this.numChannels];
         
-        this.debug          = false;
     }
     
     /**
@@ -59,6 +56,7 @@ public class MorseProcessor
     */     
     public void process() throws WavFileException, IOException
     {
+    	
         // this is the dictionary needed to translate the dot/dash string into
         // a human readable string
         MorseDictionary md              = new MorseDictionary();
