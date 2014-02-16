@@ -32,6 +32,8 @@ public class MorseProcessor
     
     private double [] buffer;
     
+    private String decodedString;
+    
     public MorseProcessor(String filename) throws WavFileException, IOException
     {
         this.wavFile        = WavFile.openWavFile(new File(filename));
@@ -95,6 +97,8 @@ public class MorseProcessor
         
         System.out.println("CW MESSAGE: "    + cw_original);
         System.out.println("MESSAGE: "       + cw_translated);
+        
+        this.decodedString = cw_translated;
         
         this.close();
     }
@@ -334,6 +338,11 @@ public class MorseProcessor
     public void displayInfo()
     {
         System.out.print(this.wavFile.getInfo());
+    }
+    
+    public String result()
+    {
+    	return this.decodedString;
     }
     
     public String toString()
