@@ -18,6 +18,7 @@
  */
  
 import java.io.*;
+
 import javax.swing.*;
 
 public class Main
@@ -26,15 +27,17 @@ public class Main
     {
         Gui mygui = new Gui();
         mygui.setTitle("Morse Audio Decoder");
-        mygui.setSize(300,200);
+        mygui.setSize(380,300);
         mygui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mygui.setLocationByPlatform(true);
         mygui.setVisible(true);
         
+        /*
         for (String cwfile: args) {
             System.out.println(cwfile);
             MorseProcessor ap = new MorseProcessor(cwfile);
             ap.process();
-        }
+        }*/
                 
     }
 }
