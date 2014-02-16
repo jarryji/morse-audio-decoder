@@ -11,4 +11,4 @@ A program written in Java that decode a WAV audio file stream into a natural lan
 >cp *.class ./release  
 >cp *.wav ./release  
 >cd release  
->java Main "sos.wav"
+>java Main
